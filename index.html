@@ -554,13 +554,13 @@
                         <p class="text-slate-200 text-sm sm:text-base">Kein Lebenslauf parat? Kein Problem! Füllen Sie einfach das Formular aus – wir melden uns bei Ihnen.</p>
                     </div>
 
-                    <!-- Application Form -->
+                    <!-- Application Form (Umgestellt auf Formspree) -->
                     <form id="express-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <!-- Position (Pre-filled) -->
                             <div class="sm:col-span-2">
                                 <label for="form-position" class="block text-xs font-bold uppercase tracking-wider text-slate-200 mb-2">Gewünschte Position *</label>
-                                <select id="form-position" required class="w-full px-4 py-3 bg-white/10 border border-white/20 focus:border-white focus:ring-1 focus:ring-white rounded-xl text-white font-medium focus:outline-none transition-colors">
+                                <select id="form-position" name="position" required class="w-full px-4 py-3 bg-white/10 border border-white/20 focus:border-white focus:ring-1 focus:ring-white rounded-xl text-white font-medium focus:outline-none transition-colors">
                                     <option value="" disabled selected class="bg-brand-900">Bitte Position wählen</option>
                                     <option value="Berufskraftfahrer (m/w/d) - Stahllogistik (C/CE)" class="bg-brand-900">Berufskraftfahrer (m/w/d) - Stahllogistik (C/CE)</option>
                                     <option value="Speditionskaufmann / Disponent (m/w/d)" class="bg-brand-900">Speditionskaufmann / Disponent (m/w/d)</option>
@@ -573,38 +573,38 @@
                             <!-- Name -->
                             <div>
                                 <label for="form-name" class="block text-xs font-bold uppercase tracking-wider text-slate-200 mb-2">Vollständiger Name *</label>
-                                <input type="text" id="form-name" required placeholder="z.B. Max Mustermann" class="w-full px-4 py-3 bg-white/10 border border-white/20 focus:border-white focus:ring-1 focus:ring-white rounded-xl placeholder-white/40 text-white focus:outline-none transition-colors">
+                                <input type="text" id="form-name" name="name" required placeholder="z.B. Max Mustermann" class="w-full px-4 py-3 bg-white/10 border border-white/20 focus:border-white focus:ring-1 focus:ring-white rounded-xl placeholder-white/40 text-white focus:outline-none transition-colors">
                             </div>
 
                             <!-- Phone -->
                             <div>
                                 <label for="form-phone" class="block text-xs font-bold uppercase tracking-wider text-slate-200 mb-2">Telefonnummer *</label>
-                                <input type="tel" id="form-phone" required placeholder="z.B. 0170 1234567" class="w-full px-4 py-3 bg-white/10 border border-white/20 focus:border-white focus:ring-1 focus:ring-white rounded-xl placeholder-white/40 text-white focus:outline-none transition-colors">
+                                <input type="tel" id="form-phone" name="telefon" required placeholder="z.B. 0170 1234567" class="w-full px-4 py-3 bg-white/10 border border-white/20 focus:border-white focus:ring-1 focus:ring-white rounded-xl placeholder-white/40 text-white focus:outline-none transition-colors">
                             </div>
 
                             <!-- E-Mail -->
                             <div>
                                 <label for="form-email" class="block text-xs font-bold uppercase tracking-wider text-slate-200 mb-2">E-Mail-Adresse *</label>
-                                <input type="email" id="form-email" required placeholder="z.B. max@beispiel.de" class="w-full px-4 py-3 bg-white/10 border border-white/20 focus:border-white focus:ring-1 focus:ring-white rounded-xl placeholder-white/40 text-white focus:outline-none transition-colors">
+                                <input type="email" id="form-email" name="email" required placeholder="z.B. max@beispiel.de" class="w-full px-4 py-3 bg-white/10 border border-white/20 focus:border-white focus:ring-1 focus:ring-white rounded-xl placeholder-white/40 text-white focus:outline-none transition-colors">
                             </div>
 
                             <!-- Earliest Start -->
                             <div>
                                 <label for="form-start" class="block text-xs font-bold uppercase tracking-wider text-slate-200 mb-2">Frühestmöglicher Start</label>
-                                <input type="text" id="form-start" placeholder="z.B. Ab sofort, in 1 Monat" class="w-full px-4 py-3 bg-white/10 border border-white/20 focus:border-white focus:ring-1 focus:ring-white rounded-xl placeholder-white/40 text-white focus:outline-none transition-colors">
+                                <input type="text" id="form-start" name="startdatum" placeholder="z.B. Ab sofort, in 1 Monat" class="w-full px-4 py-3 bg-white/10 border border-white/20 focus:border-white focus:ring-1 focus:ring-white rounded-xl placeholder-white/40 text-white focus:outline-none transition-colors">
                             </div>
 
                             <!-- Message -->
                             <div class="sm:col-span-2">
                                 <label for="form-msg" class="block text-xs font-bold uppercase tracking-wider text-slate-200 mb-2">Nachricht oder Anmerkungen (Optional)</label>
-                                <textarea id="form-msg" rows="3" placeholder="Geben Sie hier eventuelle Fragen oder Informationen an..." class="w-full px-4 py-3 bg-white/10 border border-white/20 focus:border-white focus:ring-1 focus:ring-white rounded-xl placeholder-white/40 text-white focus:outline-none transition-colors resize-none"></textarea>
+                                <textarea id="form-msg" name="nachricht" rows="3" placeholder="Geben Sie hier eventuelle Fragen oder Informationen an..." class="w-full px-4 py-3 bg-white/10 border border-white/20 focus:border-white focus:ring-1 focus:ring-white rounded-xl placeholder-white/40 text-white focus:outline-none transition-colors resize-none"></textarea>
                             </div>
 
-                            <!-- File Upload Area -->
+                            <!-- File Upload Area (Erhielt das "multiple" Attribut für echten Mehrfach-Upload) -->
                             <div class="sm:col-span-2">
                                 <label class="block text-xs font-bold uppercase tracking-wider text-slate-200 mb-2">Lebenslauf / Dokumente (Optional)</label>
                                 <div id="upload-zone" class="border-2 border-dashed border-white/20 hover:border-white rounded-2xl p-6 text-center cursor-pointer hover:bg-white/5 transition-all relative">
-                                    <input type="file" id="form-file" class="hidden" onchange="handleFileSelect(event)">
+                                    <input type="file" id="form-file" name="anlagen" class="hidden" multiple onchange="handleFileSelect(event)">
                                     <div id="upload-prompt" class="space-y-2">
                                         <i class="fa-solid fa-cloud-arrow-up text-3xl text-steel-500"></i>
                                         <p class="text-sm font-semibold">Klicken Sie zum Auswählen oder ziehen Sie Dokumente hierher</p>
@@ -612,8 +612,8 @@
                                     </div>
                                     <div id="upload-success" class="hidden space-y-2">
                                         <i class="fa-solid fa-circle-check text-3xl text-emerald-400"></i>
-                                        <p class="text-sm font-bold" id="uploaded-filename">Datei erfolgreich ausgewählt</p>
-                                        <button type="button" onclick="resetUpload(event)" class="text-xs text-red-300 underline hover:text-red-200">Datei entfernen</button>
+                                        <p class="text-sm font-bold" id="uploaded-filename">Dateien erfolgreich ausgewählt</p>
+                                        <button type="button" onclick="resetUpload(event)" class="text-xs text-red-300 underline hover:text-red-200">Dateien entfernen</button>
                                     </div>
                                 </div>
                             </div>
@@ -956,11 +956,16 @@
         }
     }
 
-    // Upload-Anzeige aktualisieren
+    // Upload-Anzeige für mehrere Dateien aktualisiert
     function updateUploadDisplay(name) {
         uploadPrompt.classList.add('hidden');
         uploadSuccess.classList.remove('hidden');
-        uploadedFilename.textContent = `Ausgewählt: ${name}`;
+        const fileInput = document.getElementById('form-file');
+        if(fileInput.files.length > 1) {
+            uploadedFilename.textContent = `${fileInput.files.length} Dateien ausgewählt`;
+        } else {
+            uploadedFilename.textContent = `Ausgewählt: ${name}`;
+        }
     }
 
     // Upload zurücksetzen
@@ -971,15 +976,65 @@
         uploadPrompt.classList.remove('hidden');
     }
 
-    // Absenden des Expressformulars
-    function handleFormSubmit(event) {
+    // AJAX-Anbindung an Formspree – Völlig kostenlos & ohne Premium-Sperren
+    async function handleFormSubmit(event) {
         event.preventDefault();
         
-        const modal = document.getElementById('success-modal');
-        modal.classList.remove('hidden');
+        const formspreeUrl = "https://formspree.io/f/xojonnlk";
         
-        document.getElementById('express-form').reset();
-        resetUpload();
+        const form = event.target;
+        const submitButton = form.querySelector('button[type="submit"]');
+        const originalButtonHtml = submitButton.innerHTML;
+        
+        // Button auf Ladestatus setzen
+        submitButton.disabled = true;
+        submitButton.innerHTML = `<i class="fa-solid fa-spinner animate-spin mr-2"></i> Wird gesendet...`;
+
+        // Ein echtes FormData-Objekt erstellen, das perfekt mit Formspree und Dateien harmoniert
+        const formData = new FormData();
+        formData.append("Gewünschte Position", document.getElementById('form-position').value);
+        formData.append("Name", document.getElementById('form-name').value);
+        formData.append("Telefonnummer", document.getElementById('form-phone').value);
+        formData.append("E-Mail", document.getElementById('form-email').value);
+        formData.append("Frühestmöglicher Start", document.getElementById('form-start').value);
+        formData.append("Nachricht", document.getElementById('form-msg').value);
+
+        const fileInput = document.getElementById('form-file');
+        if (fileInput.files.length > 0) {
+            for (let i = 0; i < fileInput.files.length; i++) {
+                // Hängt jede einzelne Anlage an den Datenstrom an
+                formData.append("Anlagen", fileInput.files[i]);
+            }
+        }
+
+        try {
+            const response = await fetch(formspreeUrl, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error("Fehler beim Senden an Formspree.");
+            }
+
+            // Erfolgsfenster öffnen
+            const modal = document.getElementById('success-modal');
+            modal.classList.remove('hidden');
+            
+            // Formular leeren
+            form.reset();
+            resetUpload();
+
+        } catch (error) {
+            alert("Es gab ein Problem beim Absenden deiner Bewerbung. Bitte versuche es noch einmal.");
+            console.error(error);
+        } window.scrollTo({ top: 0, behavior: 'smooth' });
+        
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonHtml;
     }
 
     function closeModal() {
