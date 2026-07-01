@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deine Ausbildung bei Hergarten – Starte deine Zukunft mit uns</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f5fa',
+                            100: '#d9e7f5',
+                            200: '#b3cfe9',
+                            300: '#8cbce2',
+                            400: '#408fc6',
+                            500: '#00508c', /* Hergarten Blau */
+                            600: '#004375',
+                            700: '#00355c',
+                            800: '#002846',
+                            900: '#001d33',
+                        },
+                        steel: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            500: '#8ab6d6', /* Stahl-Grau-Blau */
+                            600: '#6ca0c7',
+                            700: '#4e85af',
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Premium-Bokeh-Hintergrund im Stil von image_fe589b.jpg */
+        .azubi-hero {
+            background-color: #ffffff;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(217, 231, 245, 0.6) 0%, transparent 45%),
+                radial-gradient(circle at 90% 80%, rgba(138, 182, 214, 0.5) 0%, transparent 45%),
+                radial-gradient(#d9e7f5 1.5px, transparent 1.5px);
+            background-size: 100% 100%, 100% 100%, 32px 32px;
+        }
+        
+        /* Modern-Glow Effekte */
+        .glow-card {
+            box-shadow: 0 10px 30px -10px rgba(0, 80, 140, 0.15);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glow-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -15px rgba(0, 80, 140, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased overflow-x-hidden">
+
+<main>
+    <section class="azubi-hero relative overflow-hidden pb-20 sm:pb-28 pt-10 sm:pt-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8 sm:space-y-10">
+            
+            <!-- Mittig platziertes und responsiv vergrößertes Hergarten Logo (nutzt auf Mobilgeräten die volle Breite) -->
+            <div class="flex justify-center mb-2 sm:mb-4 px-4">
+                <a href="#" class="w-full max-w-xs sm:max-w-md md:max-w-lg block group" aria-label="Hergarten Gruppe Home">
+                    <img id="hero-logo-img" src="Hergarten_Gruppe_Logo.png" alt="Hergarten Gruppe Logo" class="w-full h-auto object-contain transform group-hover:scale-[1.02] transition-transform duration-300" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=200'; this.classList.add('rounded')">
+                </a>
+            </div>
+
+            <!-- Hauptüberschrift (Bold & Gradients) -->
+            <div class="space-y-4">
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-none">
+                    Deine Ausbildung in der <br class="hidden sm:inline">
+                    <span class="bg-gradient-to-r from-brand-500 to-steel-700 bg-clip-text text-transparent">Hergarten Gruppe!</span>
+                </h1>
+                
+                <!-- Schneller Überblick über gesuchte Berufe -->
+                <div class="flex flex-wrap justify-center gap-2 sm:gap-3 pt-4 max-w-4xl mx-auto">
+                    <span class="px-4 py-2 bg-white/80 border border-slate-200 rounded-full text-xs sm:text-sm font-bold text-slate-700 shadow-sm flex items-center gap-1.5 hover:border-brand-300 transition-colors cursor-pointer" onclick="scrollToElement('jobs')"><i class="fa-solid fa-truck text-brand-500"></i> Berufskraftfahrer</span>
+                    <span class="px-4 py-2 bg-white/80 border border-slate-200 rounded-full text-xs sm:text-sm font-bold text-slate-700 shadow-sm flex items-center gap-1.5 hover:border-brand-300 transition-colors cursor-pointer" onclick="scrollToElement('jobs')"><i class="fa-solid fa-file-invoice-dollar text-brand-500"></i> Speditionskaufleute</span>
+                    <span class="px-4 py-2 bg-white/80 border border-slate-200 rounded-full text-xs sm:text-sm font-bold text-slate-700 shadow-sm flex items-center gap-1.5 hover:border-brand-300 transition-colors cursor-pointer" onclick="scrollToElement('jobs')"><i class="fa-solid fa-screwdriver-wrench text-brand-500"></i> NFZ-Mechatroniker</span>
+                    <span class="px-4 py-2 bg-white/80 border border-slate-200 rounded-full text-xs sm:text-sm font-bold text-slate-700 shadow-sm flex items-center gap-1.5 hover:border-brand-300 transition-colors cursor-pointer" onclick="scrollToElement('jobs')"><i class="fa-solid fa-warehouse text-brand-500"></i> Lagerlogistik-Profis</span>
+                </div>
+            </div>
+
+            <!-- Versprechen Text-Block aus dem Canva-Beispiel (image_fe589b.jpg) -->
+            <div class="max-w-2xl mx-auto bg-white/40 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-white/60 shadow-lg glow-card">
+                <p class="text-base sm:text-lg text-slate-700 font-medium leading-relaxed">
+                    Wir von der Unternehmensgruppe Hergarten versprechen dir einen sicheren Job, flache Hierarchien in einem sauberen und modernen Umfeld.
+                </p>
+                <p class="text-2xl sm:text-3xl font-black text-brand-600 mt-4 tracking-tight">
+                    Na, neugierig? 😉
+                </p>
+            </div>
+
+            <!-- Standort-Visualisierung wie im Canva-Entwurf -->
+            <div class="flex justify-center items-center gap-8 text-2xl sm:text-3xl font-extrabold text-brand-700 pt-2">
+                <span class="flex items-center gap-2 drop-shadow-sm group cursor-pointer" onclick="scrollToElement('jobs')">
+                    <i class="fa-solid fa-location-pin text-red-500 animate-bounce group-hover:scale-110 transition-transform"></i> Köln
+                </span>
+                <span class="flex items-center gap-2 drop-shadow-sm group cursor-pointer" onclick="scrollToElement('jobs')">
+                    <i class="fa-solid fa-location-pin text-red-500 animate-bounce group-hover:scale-110 transition-transform"></i> Neuss
+                </span>
+            </div>
+
+            <!-- Direkte Landingpage-CTAs -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto pt-4">
+                <a href="#bewerbung-sektion" class="w-full sm:w-auto text-center inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-brand-500 rounded-xl shadow-xl shadow-brand-100 hover:bg-brand-600 transition-all transform hover:-translate-y-1">
+                    Jetzt bei uns bewerben!
+                </a>
+                <a href="#jobs" class="w-full sm:w-auto text-center inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-slate-700 bg-white border border-slate-200 rounded-xl hover:bg-slate-50 transition-all shadow-sm">
+                    Mehr erfahren / Stellen <i class="fa-solid fa-arrow-down ml-2 text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPIELERISCHES WIDGET: DER AZUBI-MATCHER (Gen-Z Hook) -->
+    <section class="py-12 bg-gradient-to-b from-white to-slate-50 border-y border-slate-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="bg-slate-900 text-white rounded-3xl p-6 sm:p-10 shadow-xl relative overflow-hidden">
+                <div class="absolute -right-20 -top-20 w-48 h-48 bg-brand-500/10 rounded-full blur-3xl"></div>
+                <div class="absolute -left-20 -bottom-20 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl"></div>
+                
+                <div class="relative z-10 text-center space-y-4">
+                    <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">3-Sekunden-Finder</span>
+                    <h2 class="text-xl sm:text-2xl font-extrabold">Finde heraus, welcher Hergarten-Typ du bist!</h2>
+                    <p class="text-xs sm:text-sm text-slate-300 max-w-lg mx-auto">Was liegt dir im Alltag am meisten? Klicke auf deine größte Stärke und wir zeigen dir deine Traum-Ausbildung.</p>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 pt-4">
+                        <button onclick="matchAzubi('Fahrpersonal')" class="flex flex-col items-center justify-center p-4 bg-white/5 hover:bg-brand-500/30 border border-white/10 hover:border-brand-400 rounded-2xl transition-all group">
+                            <i class="fa-solid fa-truck text-2xl text-brand-400 group-hover:scale-110 transition-transform mb-2"></i>
+                            <span class="text-xs font-bold">Große Maschinen</span>
+                        </button>
+                        <button onclick="matchAzubi('Disposition')" class="flex flex-col items-center justify-center p-4 bg-white/5 hover:bg-brand-500/30 border border-white/10 hover:border-brand-400 rounded-2xl transition-all group">
+                            <i class="fa-solid fa-laptop text-2xl text-brand-400 group-hover:scale-110 transition-transform mb-2"></i>
+                            <span class="text-xs font-bold">Planen & Organisieren</span>
+                        </button>
+                        <button onclick="matchAzubi('Werkstatt')" class="flex flex-col items-center justify-center p-4 bg-white/5 hover:bg-brand-500/30 border border-white/10 hover:border-brand-400 rounded-2xl transition-all group">
+                            <i class="fa-solid fa-screwdriver-wrench text-2xl text-brand-400 group-hover:scale-110 transition-transform mb-2"></i>
+                            <span class="text-xs font-bold">Technik & Schrauben</span>
+                        </button>
+                        <button onclick="matchAzubi('Logistik')" class="flex flex-col items-center justify-center p-4 bg-white/5 hover:bg-brand-500/30 border border-white/10 hover:border-brand-400 rounded-2xl transition-all group">
+                            <i class="fa-solid fa-warehouse text-2xl text-brand-400 group-hover:scale-110 transition-transform mb-2"></i>
+                            <span class="text-xs font-bold">Aktiv anpacken</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="jobs" class="py-16 bg-slate-100 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
+                <span class="text-xs font-bold tracking-widest text-brand-500 uppercase">Deine Wahl</span>
+                <h2 class="text-3xl font-black text-slate-900 tracking-tight">Unsere 4 Ausbildungsberufe</h2>
+                <p class="text-sm text-slate-600">Wir bilden dich für das echte Leben aus. Klicke auf „Details anzeigen“, um Aufgaben und coole Vergünstigungen zu sehen.</p>
+            </div>
+
+            <!-- Stellenangebote Liste -->
+            <div id="jobs-container" class="space-y-6">
+                
+                <!-- AZUBI JOB 1: Berufskraftfahrer -->
+                <div id="card-fahrpersonal" class="job-card bg-white hover:bg-slate-50/40 border border-slate-200 hover:border-brand-300 rounded-2xl p-6 sm:p-8 flex flex-col gap-4 transition-all duration-300 shadow-sm" data-dept="Fahrpersonal">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                        <div class="space-y-4 flex-1">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-50 text-brand-700">Fahrpersonal / Logistik</span>
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-50 text-emerald-700"><i class="fa-solid fa-id-card mr-1 text-[10px]"></i> Lkw-Führerschein gratis!</span>
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-100 text-slate-700"><i class="fa-solid fa-calendar mr-1 text-[10px]"></i> Start: Aug/Sept 2026</span>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl font-black text-slate-900">Ausbildung zum Berufskraftfahrer (m/w/d)</h3>
+                            <p class="text-sm text-slate-500 leading-relaxed max-w-3xl">
+                                Steuere unsere modernen Hänger- & Sattelzüge (MAN/Scania) sowie nagelneue E-Trucks im Nahverkehr. Du lernst alles über Routenplanung und bist jeden Tag pünktlich zum Feierabend zu Hause.
+                            </p>
+                            
+                            <!-- Visual Game-like Stats for Gamification -->
+                            <div class="grid grid-cols-3 gap-4 max-w-md pt-2">
+                                <div class="space-y-1">
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Action-Faktor</span>
+                                    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden"><div class="bg-brand-500 h-full w-[95%]"></div></div>
+                                </div>
+                                <div class="space-y-1">
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Technik-Faktor</span>
+                                    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden"><div class="bg-brand-500 h-full w-[80%]"></div></div>
+                                </div>
+                                <div class="space-y-1">
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Zukunftssicherheit</span>
+                                    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden"><div class="bg-emerald-500 h-full w-[100%]"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-auto flex flex-row lg:flex-col gap-2 lg:items-end justify-end self-stretch lg:self-center">
+                            <button onclick="toggleJobDetails('details-job1', this)" class="flex-1 lg:flex-none px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-xs sm:text-sm transition-colors text-center whitespace-nowrap">
+                                <span class="btn-text">Details anzeigen</span> <i class="fa-solid fa-chevron-down ml-1 text-xs transition-transform duration-200"></i>
+                            </button>
+                            <button onclick="applyToJob('Ausbildung zum Berufskraftfahrer (m/w/d)')" class="flex-1 lg:flex-none px-5 py-3 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-xl text-xs sm:text-sm transition-colors text-center whitespace-nowrap shadow-md">
+                                Jetzt bewerben
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Details Accordion -->
+                    <div id="details-job1" class="grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0 overflow-hidden">
+                        <div class="overflow-hidden">
+                            <div class="pt-6 border-t border-slate-100 mt-4 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+                                <div class="space-y-2">
+                                    <h4 class="font-extrabold text-slate-800 flex items-center gap-2"><i class="fa-solid fa-clipboard-list text-brand-500"></i> Deine Aufgaben:</h4>
+                                    <ul class="list-disc list-inside text-slate-600 space-y-1.5">
+                                        <li>Fahrpraxis auf modernsten LKW & E-Trucks</li>
+                                        <li>Sicherung der Stahl-Ladungen mit Ketten/Gurten</li>
+                                        <li>Routenplanung per Tablet-Navigation</li>
+                                        <li>Abfahrtskontrolle und Fahrzeugpflege</li>
+                                    </ul>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="font-extrabold text-slate-800 flex items-center gap-2"><i class="fa-solid fa-user-check text-brand-500"></i> Das bringst du mit:</h4>
+                                    <ul class="list-disc list-inside text-slate-600 space-y-1.5">
+                                        <li>Hauptschul- oder Realschulabschluss</li>
+                                        <li>Begeisterung für große Fahrzeuge und Technik</li>
+                                        <li>Zuverlässigkeit & Verantwortungsbewusstsein</li>
+                                        <li>Mindestalter von 17 oder 18 Jahren</li>
+                                    </ul>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="font-extrabold text-slate-800 flex items-center gap-2"><i class="fa-solid fa-gift text-brand-500"></i> Deine Azubi-Vorteile:</h4>
+                                    <ul class="list-disc list-inside text-slate-600 space-y-1.5">
+                                        <li class="font-semibold text-emerald-600">Wir zahlen deinen Lkw-Führerschein (Klasse C/CE)</li>
+                                        <li>Sehr hohe Übernahmechancen nach der Ausbildung</li>
+                                        <li>Echte Tagestouren (täglich nach Hause kommen)</li>
+                                        <li>Diensthandy auch zur privaten Nutzung</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AZUBI JOB 2: Speditionskaufmann -->
+                <div id="card-disposition" class="job-card bg-white hover:bg-slate-50/40 border border-slate-200 hover:border-brand-300 rounded-2xl p-6 sm:p-8 flex flex-col gap-4 transition-all duration-300 shadow-sm" data-dept="Disposition">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                        <div class="space-y-4 flex-1">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-50 text-brand-700">Büro / Organisation</span>
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-blue-50 text-blue-700"><i class="fa-solid fa-laptop mr-1 text-[10px]"></i> Eigene Azubi-Projekte</span>
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-100 text-slate-700"><i class="fa-solid fa-calendar mr-1 text-[10px]"></i> Start: Aug/Sept 2026</span>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl font-black text-slate-900">Ausbildung zum Kaufmann für Spedition und Logistikdienstleistung (m/w/d)</h3>
+                            <p class="text-sm text-slate-500 leading-relaxed max-w-3xl">
+                                Lerne die Schaltzentrale der Logistik kennen! In Neuss-Holzheim planst du Transportrouten, koordinierst das Fahrpersonal und steuerst den Warenfluss mit modernster Speditionssoftware.
+                            </p>
+                            
+                            <!-- Visual Game-like Stats for Gamification -->
+                            <div class="grid grid-cols-3 gap-4 max-w-md pt-2">
+                                <div class="space-y-1">
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Organisations-Power</span>
+                                    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden"><div class="bg-brand-500 h-full w-[95%]"></div></div>
+                                </div>
+                                <div class="space-y-1">
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Team-Kommunikation</span>
+                                    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden"><div class="bg-brand-500 h-full w-[90%]"></div></div>
+                                </div>
+                                <div class="space-y-1">
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Zukunftssicherheit</span>
+                                    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden"><div class="bg-emerald-500 h-full w-[100%]"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-auto flex flex-row lg:flex-col gap-2 lg:items-end justify-end self-stretch lg:self-center">
+                            <button onclick="toggleJobDetails('details-job2', this)" class="flex-1 lg:flex-none px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-xs sm:text-sm transition-colors text-center whitespace-nowrap">
+                                <span class="btn-text">Details anzeigen</span> <i class="fa-solid fa-chevron-down ml-1 text-xs transition-transform duration-200"></i>
+                            </button>
+                            <button onclick="applyToJob('Ausbildung zum Kaufmann für Spedition und Logistikdienstleistung (m/w/d)')" class="flex-1 lg:flex-none px-5 py-3 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-xl text-xs sm:text-sm transition-colors text-center whitespace-nowrap shadow-md">
+                                Jetzt bewerben
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Details Accordion -->
+                    <div id="details-job2" class="grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0 overflow-hidden">
+                        <div class="overflow-hidden">
+                            <div class="pt-6 border-t border-slate-100 mt-4 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+                                <div class="space-y-2">
+                                    <h4 class="font-extrabold text-slate-800 flex items-center gap-2"><i class="fa-solid fa-clipboard-list text-brand-500"></i> Deine Aufgaben:</h4>
+                                    <ul class="list-disc list-inside text-slate-600 space-y-1.5">
+                                        <li>Einsatzplanung unseres Lkw-Fuhrparks</li>
+                                        <li>Kundenbetreuung & Auftragsannahme</li>
+                                        <li>Kalkulation von Frachtpreisen & Routenplanung</li>
+                                        <li>Zusammenarbeit mit Werkstatt und Lager</li>
+                                    </ul>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="font-extrabold text-slate-800 flex items-center gap-2"><i class="fa-solid fa-user-check text-brand-500"></i> Das bringst du mit:</h4>
+                                    <ul class="list-disc list-inside text-slate-600 space-y-1.5">
+                                        <li>Realschulabschluss, Fachabitur oder Abitur</li>
+                                        <li>Spaß am Organisieren und logischem Denken</li>
+                                        <li>Kommunikationsstärke & Teamgeist</li>
+                                        <li>Gute PC-Kenntnisse</li>
+                                    </ul>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="font-extrabold text-slate-800 flex items-center gap-2"><i class="fa-solid fa-gift text-brand-500"></i> Deine Azubi-Vorteile:</h4>
+                                    <ul class="list-disc list-inside text-slate-600 space-y-1.5">
+                                        <li>Modern ausgestattete Büroräume</li>
+                                        <li>Arbeiten mit der Premium-Software Winsped</li>
+                                        <li>Attraktive Vergütung, Urlaubs- & Weihnachtsgeld</li>
+                                        <li>Diensthandy auch zur privaten Nutzung</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AZUBI JOB 3: KFZ-Mechatroniker -->
+                <div id="card-werkstatt" class="job-card bg-white hover:bg-slate-50/40 border border-slate-200 hover:border-brand-300 rounded-2xl p-6 sm:p-8 flex flex-col gap-4 transition-all duration-300 shadow-sm" data-dept="Werkstatt">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                        <div class="space-y-4 flex-1">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-50 text-brand-700">Werkstatt / Technik</span>
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-amber-50 text-amber-700"><i class="fa-solid fa-bolt mr-1 text-[10px]"></i> Arbeiten mit High-Tech</span>
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-100 text-slate-700"><i class="fa-solid fa-calendar mr-1 text-[10px]"></i> Start: Aug/Sept 2026</span>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl font-black text-slate-900">Ausbildung zum Kfz-Mechatroniker für Nutzfahrzeugtechnik (m/w/d)</h3>
+                            <p class="text-sm text-slate-500 leading-relaxed max-w-3xl">
+                                Werde Technik-Profi für unsere schweren Brummer! In unserer top ausgestatteten, freien Meisterwerkstatt in Neuss lernst du alles über LKW-Mechanik, komplexe Elektronik und die Wartung modernster MAN/Scania-Fahrzeuge.
+                            </p>
+                            
+                            <!-- Visual Game-like Stats for Gamification -->
+                            <div class="grid grid-cols-3 gap-4 max-w-md pt-2">
+                                <div class="space-y-1">
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Handwerk & Skill</span>
+                                    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden"><div class="bg-brand-500 h-full w-[95%]"></div></div>
+                                </div>
+                                <div class="space-y-1">
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">High-Tech Diagnose</span>
+                                    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden"><div class="bg-brand-500 h-full w-[90%]"></div></div>
+                                </div>
+                                <div class="space-y-1">
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Zukunftssicherheit</span>
+                                    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden"><div class="bg-emerald-500 h-full w-[100%]"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-auto flex flex-row lg:flex-col gap-2 lg:items-end justify-end self-stretch lg:self-center">
+                            <button onclick="toggleJobDetails('details-job3', this)" class="flex-1 lg:flex-none px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-xs sm:text-sm transition-colors text-center whitespace-nowrap">
+                                <span class="btn-text">Details anzeigen</span> <i class="fa-solid fa-chevron-down ml-1 text-xs transition-transform duration-200"></i>
+                            </button>
+                            <button onclick="applyToJob('Ausbildung zum Kfz-Mechatroniker für Nutzfahrzeugtechnik (m/w/d)')" class="flex-1 lg:flex-none px-5 py-3 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-xl text-xs sm:text-sm transition-colors text-center whitespace-nowrap shadow-md">
+                                Jetzt bewerben
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Details Accordion -->
+                    <div id="details-job3" class="grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0 overflow-hidden">
+                        <div class="overflow-hidden">
+                            <div class="pt-6 border-t border-slate-100 mt-4 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+                                <div class="space-y-2">
+                                    <h4 class="font-extrabold text-slate-800 flex items-center gap-2"><i class="fa-solid fa-clipboard-list text-brand-500"></i> Deine Aufgaben:</h4>
+                                    <ul class="list-disc list-inside text-slate-600 space-y-1.5">
+                                        <li>Diagnose von Fehlern mit High-Tech-Geräten</li>
+                                        <li>Wartung & Reparatur von Motoren & Bremsen</li>
+                                        <li>Instandsetzung von Hydraulik & Pneumatik</li>
+                                        <li>Prüfung von elektronischen Systemen im Lkw</li>
+                                    </ul>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="font-extrabold text-slate-800 flex items-center gap-2"><i class="fa-solid fa-user-check text-brand-500"></i> Das bringst du mit:</h4>
+                                    <ul class="list-disc list-inside text-slate-600 space-y-1.5">
+                                        <li>Hauptschul- oder Realschulabschluss</li>
+                                        <li>Handwerkliches Geschick & technisches Interesse</li>
+                                        <li>Verständnis für Zahlen & Elektronik</li>
+                                        <li>Lust, im Team anzupacken</li>
+                                    </ul>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="font-extrabold text-slate-800 flex items-center gap-2"><i class="fa-solid fa-gift text-brand-500"></i> Deine Azubi-Vorteile:</h4>
+                                    <ul class="list-disc list-inside text-slate-600 space-y-1.5">
+                                        <li>Helle, hochmoderne Meisterwerkstatt vor Ort</li>
+                                        <li>Arbeiten mit erstklassigem Premium-Werkzeug</li>
+                                        <li class="font-semibold text-emerald-600">Geregelte Arbeitszeiten (kein Schichtdienst!)</li>
+                                        <li>Diensthandy auch zur privaten Nutzung</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AZUBI JOB 4: Lagerlogistik -->
+                <div id="card-logistik" class="job-card bg-white hover:bg-slate-50/40 border border-slate-200 hover:border-brand-300 rounded-2xl p-6 sm:p-8 flex flex-col gap-4 transition-all duration-300 shadow-sm" data-dept="Logistik">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                        <div class="space-y-4 flex-1">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-50 text-brand-700">Lagerlogistik</span>
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-sky-50 text-sky-700"><i class="fa-solid fa-dharmachakra mr-1 text-[10px]"></i> Staplerschein inkl.</span>
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-100 text-slate-700"><i class="fa-solid fa-calendar mr-1 text-[10px]"></i> Start: Aug/Sept 2026</span>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl font-black text-slate-900">Ausbildung zur Fachkraft für Lagerlogistik (m/w/d)</h3>
+                            <p class="text-sm text-slate-500 leading-relaxed max-w-3xl">
+                                Behalte den Überblick im Umschlaglager! Lerne das fachgerechte Einlagern schwerer Stahlprodukte, die Steuerung der Hallenkräne und das sichere Beladen unserer Spezial-Lkw.
+                            </p>
+                            
+                            <!-- Visual Game-like Stats for Gamification -->
+                            <div class="grid grid-cols-3 gap-4 max-w-md pt-2">
+                                <div class="space-y-1">
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Power & Fitness</span>
+                                    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden"><div class="bg-brand-500 h-full w-[90%]"></div></div>
+                                </div>
+                                <div class="space-y-1">
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Orga-Skill</span>
+                                    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden"><div class="bg-brand-500 h-full w-[85%]"></div></div>
+                                </div>
+                                <div class="space-y-1">
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Zukunftssicherheit</span>
+                                    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden"><div class="bg-emerald-500 h-full w-[100%]"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-auto flex flex-row lg:flex-col gap-2 lg:items-end justify-end self-stretch lg:self-center">
+                            <button onclick="toggleJobDetails('details-job4', this)" class="flex-1 lg:flex-none px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-xs sm:text-sm transition-colors text-center whitespace-nowrap">
+                                <span class="btn-text">Details anzeigen</span> <i class="fa-solid fa-chevron-down ml-1 text-xs transition-transform duration-200"></i>
+                            </button>
+                            <button onclick="applyToJob('Ausbildung zur Fachkraft für Lagerlogistik (m/w/d)')" class="flex-1 lg:flex-none px-5 py-3 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-xl text-xs sm:text-sm transition-colors text-center whitespace-nowrap shadow-md">
+                                Jetzt bewerben
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Details Accordion -->
+                    <div id="details-job4" class="grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0 overflow-hidden">
+                        <div class="overflow-hidden">
+                            <div class="pt-6 border-t border-slate-100 mt-4 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+                                <div class="space-y-2">
+                                    <h4 class="font-extrabold text-slate-800 flex items-center gap-2"><i class="fa-solid fa-clipboard-list text-brand-500"></i> Deine Aufgaben:</h4>
+                                    <ul class="list-disc list-inside text-slate-600 space-y-1.5">
+                                        <li>Be- und Entladen von Lkw mit Stapler & Kran</li>
+                                        <li>Wareneingangs- & Qualitätskontrollen</li>
+                                        <li>Fachgerechte Lagerung von Stahlcoils & Blechen</li>
+                                        <li>Verpackung & Dokumentation der Güter</li>
+                                    </ul>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="font-extrabold text-slate-800 flex items-center gap-2"><i class="fa-solid fa-user-check text-brand-500"></i> Das bringst du mit:</h4>
+                                    <ul class="list-disc list-inside text-slate-600 space-y-1.5">
+                                        <li>Hauptschul- oder Realschulabschluss</li>
+                                        <li>Zuverlässigkeit, Dynamik und Sorgfalt</li>
+                                        <li>Spaß an praktischer Bewegung (nicht nur am Schreibtisch)</li>
+                                        <li>Interesse an logistischen Abläufen</li>
+                                    </ul>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="font-extrabold text-slate-800 flex items-center gap-2"><i class="fa-solid fa-gift text-brand-500"></i> Deine Azubi-Vorteile:</h4>
+                                    <ul class="list-disc list-inside text-slate-600 space-y-1.5">
+                                        <li class="font-semibold text-emerald-600">Kostenloser Staplerschein im Rahmen der Ausbildung</li>
+                                        <li>Sicheres Arbeiten mit modernem Equipment</li>
+                                        <li>Garantierte Übernahme bei guten Leistungen</li>
+                                        <li>Diensthandy auch zur privaten Nutzung</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Keine Stellen gefunden -->
+            <div id="no-jobs" class="hidden text-center py-12 bg-white rounded-2xl border border-slate-200 p-8">
+                <i class="fa-regular fa-folder-open text-slate-300 text-5xl mb-4"></i>
+                <h4 class="font-bold text-lg text-slate-800">Kein passender Ausbildungsplatz gefunden?</h4>
+                <p class="text-slate-500 text-sm mt-1">Sende uns eine Initiativbewerbung oder mach erst mal ein Schnupperpraktikum bei uns!</p>
+                <button onclick="applyToJob('Initiativbewerbung / Schnupperpraktikum')" class="mt-4 inline-flex items-center justify-center px-5 py-2.5 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-xl text-sm transition-colors shadow">
+                    Jetzt initiativ bewerben
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="bewerbung-sektion" class="py-16 bg-white scroll-mt-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <!-- Modern Mobile App Dark Design to appeal to Gen-Z -->
+            <div class="bg-slate-900 rounded-3xl shadow-2xl overflow-hidden text-white relative border border-slate-800">
+                <div class="absolute -right-16 -bottom-16 w-64 h-64 bg-brand-500/10 rounded-full blur-2xl"></div>
+                <div class="absolute -left-16 -top-16 w-64 h-64 bg-emerald-500/10 rounded-full blur-2xl"></div>
+
+                <div class="p-8 sm:p-12 relative z-10">
+                    <div class="text-center max-w-2xl mx-auto space-y-4 mb-10">
+                        <span class="text-xs font-bold tracking-widest text-emerald-400 uppercase">⚡ Turbo-Expressbewerbung</span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight transition-all duration-300" id="express-title-dynamic">
+                            Bewerben in nur 60 Sekunden!
+                        </h2>
+                        <p class="text-slate-400 text-sm sm:text-base">Kein Anschreiben? Kein Lebenslauf parat? Kein Stress! Fülle einfach das kurze Formular aus und wir melden uns bei dir.</p>
+                    </div>
+
+                    <form id="express-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="sm:col-span-2">
+                                <label for="form-position" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Deine Wunsch-Ausbildung *</label>
+                                <select id="form-position" name="entry.545468363" required class="w-full px-4 py-3.5 bg-white/5 border border-white/10 focus:border-brand-400 focus:ring-2 focus:ring-brand-500/20 rounded-xl text-white font-medium focus:outline-none transition-all cursor-pointer" onchange="updateFormHeader(this.value)">
+                                    <option value="" disabled selected class="bg-slate-900">Bitte wähle deine Wunsch-Stelle</option>
+                                    <option value="Ausbildung zum Berufskraftfahrer (m/w/d)" class="bg-slate-900">Ausbildung zum Berufskraftfahrer (m/w/d)</option>
+                                    <option value="Ausbildung zum Kaufmann für Spedition und Logistikdienstleistung (m/w/d)" class="bg-slate-900">Ausbildung zum Kaufmann für Spedition u. Logistik (m/w/d)</option>
+                                    <option value="Ausbildung zum Kfz-Mechatroniker für Nutzfahrzeugtechnik (m/w/d)" class="bg-slate-900">Ausbildung zum Kfz-Mechatroniker (m/w/d)</option>
+                                    <option value="Ausbildung zur Fachkraft für Lagerlogistik (m/w/d)" class="bg-slate-900">Ausbildung zur Fachkraft für Lagerlogistik (m/w/d)</option>
+                                    <option value="Initiativbewerbung / Schnupperpraktikum" class="bg-slate-900">Schnupperpraktikum / Ferienjob / Initiativ</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="form-name" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Dein Name *</label>
+                                <input type="text" id="form-name" name="entry.1299762322" required placeholder="Vor- und Nachname" class="w-full px-4 py-3.5 bg-white/5 border border-white/10 focus:border-brand-400 focus:ring-2 focus:ring-brand-500/20 rounded-xl placeholder-white/20 text-white focus:outline-none transition-all">
+                            </div>
+
+                            <div>
+                                <label for="form-phone" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Deine Handynummer *</label>
+                                <input type="tel" id="form-phone" name="entry.1674300162" required placeholder="z. B. für WhatsApp Kontakt" class="w-full px-4 py-3.5 bg-white/5 border border-white/10 focus:border-brand-400 focus:ring-2 focus:ring-brand-500/20 rounded-xl placeholder-white/20 text-white focus:outline-none transition-all">
+                            </div>
+
+                            <div>
+                                <label for="form-email" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Deine E-Mail-Adresse *</label>
+                                <input type="email" id="form-email" name="entry.950497782" required placeholder="Deine E-Mail" class="w-full px-4 py-3.5 bg-white/5 border border-white/10 focus:border-brand-400 focus:ring-2 focus:ring-brand-500/20 rounded-xl placeholder-white/20 text-white focus:outline-none transition-all">
+                            </div>
+
+                            <div>
+                                <label for="form-start" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Wann kannst du starten? *</label>
+                                <input type="text" id="form-start" name="entry.398471918" required placeholder="z. B. ab sofort, August 2026..." class="w-full px-4 py-3.5 bg-white/5 border border-white/10 focus:border-brand-400 focus:ring-2 focus:ring-brand-500/20 rounded-xl placeholder-white/20 text-white focus:outline-none transition-all">
+                            </div>
+
+                            <div class="sm:col-span-2">
+                                <label for="form-msg" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Kurze Info zu dir (Optional)</label>
+                                <textarea id="form-msg" name="entry.1942411258" rows="3" placeholder="Z. B.: 'Habe Interesse an einem Vorab-Praktikum' oder 'Freue mich auf Rückmeldung!'" class="w-full px-4 py-3.5 bg-white/5 border border-white/10 focus:border-brand-400 focus:ring-2 focus:ring-brand-500/20 rounded-xl placeholder-white/20 text-white focus:outline-none transition-all resize-none"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="pt-4">
+                            <button type="submit" class="w-full py-4 px-8 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-xl text-base shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 flex items-center justify-center">
+                                <i class="fa-solid fa-paper-plane mr-2 text-sm"></i> Expressbewerbung absenden
+                            </button>
+                        </div>
+
+                        <p class="text-center text-[10px] text-slate-400 leading-relaxed">
+                            Mit dem Absenden der Bewerbung stimmst du der Verarbeitung deiner Daten gemäß unserer <a href="https://www.stahlspedition.de/datenschutz/" target="_blank" class="underline hover:text-white">Datenschutzerklärung</a> zu.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-slate-50 border-t border-slate-200/40">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+                <span class="text-sm font-bold tracking-widest text-brand-500 uppercase">Echte Stimmen</span>
+                <h2 class="text-3xl font-black text-slate-900 tracking-tight">Das sagen unsere Azubis</h2>
+            </div>
+
+            <div class="bg-white rounded-3xl p-8 relative border border-slate-200/40 overflow-hidden shadow-sm">
+                <div class="absolute right-6 top-4 text-9xl text-brand-100 font-serif pointer-events-none select-none">“</div>
+                
+                <div id="testimonials" class="relative min-h-[160px]">
+                    <div class="testimonial-item block transition-opacity duration-500">
+                        <p class="text-base sm:text-lg text-slate-700 italic leading-relaxed mb-6 relative z-10">
+                            "Ich habe meine Ausbildung als Berufskraftfahrer bei Hergarten gemacht. Von Tag 1 an wurde ich super integriert, der Lkw-Führerschein wurde komplett übernommen. Jetzt bin ich fest übernommen und fahre täglich im Nahverkehr."
+                        </p>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-500 text-white flex items-center justify-center font-bold text-base shadow">M</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Marc B.</h4>
+                                <p class="text-xs text-slate-500">Ex-Azubi & jetzt Berufskraftfahrer (Köln/Neuss)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-item hidden transition-opacity duration-500">
+                        <p class="text-base sm:text-lg text-slate-700 italic leading-relaxed mb-6 relative z-10">
+                            "Die Ausbildung als Speditionskauffrau macht riesigen Spaß. Man bekommt eigene Azubi-Projekte übertragen und lernt, Verantwortung zu tragen. Alle Kollegen helfen einem weiter."
+                        </p>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 rounded-full bg-steel-500 text-white flex items-center justify-center font-bold text-base shadow">L</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Laura S.</h4>
+                                <p class="text-xs text-slate-500">Azubi zur Kauffrau für Spedition (Neuss-Holzheim)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-center mt-6 pt-4 border-t border-slate-200/50">
+                    <div class="flex space-x-1.5" id="testimonial-dots">
+                        <button class="w-2 h-2 rounded-full bg-brand-500 transition-all duration-300" onclick="setTestimonial(0)" aria-label="Slide 1"></button>
+                        <button class="w-2 h-2 rounded-full bg-slate-300 hover:bg-brand-400 transition-all duration-300" onclick="setTestimonial(1)" aria-label="Slide 2"></button>
+                    </div>
+                    <div class="flex space-x-2">
+                        <button onclick="prevTestimonial()" class="p-1.5 border border-slate-200 rounded-lg hover:bg-white transition-colors" aria-label="Vorheriges Testimonial">
+                            <i class="fa-solid fa-chevron-left text-xs text-slate-600"></i>
+                        </button>
+                        <button onclick="nextTestimonial()" class="p-1.5 border border-slate-200 rounded-lg hover:bg-white transition-colors" aria-label="Nächstes Testimonial">
+                            <i class="fa-solid fa-chevron-right text-xs text-slate-600"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-16 bg-slate-50 border-t border-slate-200/40">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+                <span class="text-sm font-bold tracking-widest text-brand-500 uppercase">Deine Fragen</span>
+                <h2 class="text-3xl font-black text-slate-900 tracking-tight">Deine Fragen? Unsere Antworten</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-white border border-slate-200/60 rounded-2xl overflow-hidden transition-all duration-200 shadow-sm">
+                    <button class="w-full flex items-center justify-between p-5 text-left focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-bold text-slate-800 text-sm sm:text-base">Muss ich zwingend gute Noten im Zeugnis haben?</span>
+                        <span class="ml-4 flex h-7 items-center"><i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i></span>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="p-5 pt-0 border-t border-slate-50 text-slate-600 text-sm sm:text-base leading-relaxed">
+                            Noten sind nicht alles! Für uns zählen deine Motivation, dein Wille zu lernen und deine Zuverlässigkeit viel mehr als eine Mathe-Zwei im Zeugnis. Zeig uns einfach, dass du Lust hast, ein wichtiger Teil unseres Teams zu werden.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-200/60 rounded-2xl overflow-hidden transition-all duration-200 shadow-sm">
+                    <button class="w-full flex items-center justify-between p-5 text-left focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-bold text-slate-800 text-sm sm:text-base">Kann ich vorher ein Schnupperpraktikum machen?</span>
+                        <span class="ml-4 flex h-7 items-center"><i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i></span>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="p-5 pt-0 border-t border-slate-50 text-slate-600 text-sm sm:text-base leading-relaxed">
+                            Ja, super gerne! Wähle im Express-Bewerber-Formular einfach „Initiativbewerbung / Schnupperpraktikum“. Wir stimmen mit dir ein paar unkomplizierte Schnuppertage ab, an denen du das Berufsfeld und unser Team hautnah erleben kannst.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-200/60 rounded-2xl overflow-hidden transition-all duration-200 shadow-sm">
+                    <button class="w-full flex items-center justify-between p-5 text-left focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-bold text-slate-800 text-sm sm:text-base">Wie hoch sind die Übernahmechancen nach der Ausbildung?</span>
+                        <span class="ml-4 flex h-7 items-center"><i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i></span>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="p-5 pt-0 border-t border-slate-50 text-slate-600 text-sm sm:text-base leading-relaxed">
+                            Wir bilden primär für unseren eigenen Bedarf aus. Wenn du deine Ausbildung erfolgreich meisterst und engagiert im Team anpackst, garantieren wir dir eine direkte Übernahme in ein unbefristetes, krisensicheres Arbeitsverhältnis!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-slate-900 text-slate-400 pt-12 pb-8 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
+            <div class="md:col-span-6 space-y-4">
+                <a href="#" class="inline-block transform hover:scale-[1.02] transition-transform duration-300" aria-label="Hergarten Gruppe Home Footer">
+                    <img src="Hergarten_Gruppe_Logo.png" alt="Hergarten Gruppe Logo Footer" class="h-10 sm:h-12 w-auto object-contain brightness-0 invert opacity-80" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=200'; this.classList.add('rounded')">
+                </a>
+                <p class="text-slate-400 text-sm leading-relaxed max-w-sm font-light">
+                    Seit über 120 Jahren die zuverlässige Adresse für Logistiklösungen und erstklassige Ausbildungschancen in der europäischen Stahllogistik.
+                </p>
+            </div>
+
+            <div class="md:col-span-6 space-y-4 md:text-right text-xs sm:text-sm font-light">
+                <h4 class="font-semibold text-white uppercase tracking-wider">Hergarten Gruppe</h4>
+                <p>
+                    Gladbacher Str. 455 | 41460 Neuss<br>
+                    Telefon: +49 (0) 2131 314022-20<br>
+                    E-Mail: karriere@hergarten-gruppe.de
+                </p>
+            </div>
+        </div>
+
+        <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
+            <p>&copy; 2026 Hergarten Gruppe. Alle Rechte vorbehalten.</p>
+            <div class="flex space-x-6">
+                <a href="https://www.stahlspedition.de/impressum/" class="hover:text-white transition-colors" target="_blank">Impressum</a>
+                <a href="https://www.stahlspedition.de/datenschutz/" class="hover:text-white transition-colors" target="_blank">Datenschutz</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Modals for feedback -->
+<div id="success-modal" class="fixed inset-0 z-50 overflow-y-auto hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" aria-hidden="true" onclick="closeModal()"></div>
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+        
+        <div class="inline-block align-bottom bg-white rounded-2xl px-4 pt-5 pb-4 text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6">
+            <div class="sm:flex sm:items-start">
+                <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-emerald-100 text-emerald-600 sm:mx-0 sm:h-10 sm:w-10">
+                    <i class="fa-solid fa-circle-check text-xl"></i>
+                </div>
+                <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                    <h3 class="text-lg leading-6 font-bold text-slate-900" id="modal-title">Bewerbung erfolgreich gesendet!</h3>
+                    <div class="mt-2">
+                        <p class="text-sm text-slate-500">
+                            Vielen Dank für dein Interesse an einer Ausbildung bei uns! Wir melden uns innerhalb der nächsten 48 Stunden telefonisch, per E-Mail oder per WhatsApp bei dir.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
+                <button type="button" onclick="closeModal()" class="w-full inline-flex justify-center rounded-xl border border-transparent shadow-sm px-4 py-2 bg-brand-500 hover:bg-brand-600 text-base font-medium text-white focus:outline-none sm:ml-3 sm:w-auto sm:text-sm">
+                    Schließen
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="error-modal" class="fixed inset-0 z-50 overflow-y-auto hidden" aria-labelledby="error-modal-title" role="dialog" aria-modal="true">
+    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" aria-hidden="true" onclick="closeErrorModal()"></div>
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+        
+        <div class="inline-block align-bottom bg-white rounded-2xl px-4 pt-5 pb-4 text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6">
+            <div class="sm:flex sm:items-start">
+                <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 text-red-600 sm:mx-0 sm:h-10 sm:w-10">
+                    <i class="fa-solid fa-triangle-exclamation text-xl"></i>
+                </div>
+                <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                    <h3 class="text-lg leading-6 font-bold text-slate-900" id="error-modal-title">Übertragungsfehler</h3>
+                    <div class="mt-2">
+                        <p class="text-sm text-slate-500" id="error-modal-text">
+                            Es gab ein Problem beim Absenden deiner Expressbewerbung.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse gap-2">
+                <button type="button" onclick="closeErrorModal()" class="w-full inline-flex justify-center rounded-xl border border-transparent shadow-sm px-4 py-2 bg-slate-200 hover:bg-slate-300 text-base font-medium text-slate-700 focus:outline-none sm:w-auto sm:text-sm">
+                    Schließen
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Smooth Scrolling Helper
+    function scrollToElement(id) {
+        const el = document.getElementById(id);
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    // Gamifizierter Matcher-Code
+    function matchAzubi(deptName) {
+        const targetCard = document.getElementById(`card-${deptName.toLowerCase()}`);
+        const jobsSection = document.getElementById('jobs');
+        
+        if (jobsSection) {
+            jobsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Highlight visual effect on matched card
+        const allCards = document.querySelectorAll('.job-card');
+        allCards.forEach(card => {
+            card.classList.remove('ring-4', 'ring-brand-500', 'ring-offset-2', 'scale-[1.02]');
+        });
+
+        if (targetCard) {
+            setTimeout(() => {
+                targetCard.classList.add('ring-4', 'ring-brand-500', 'ring-offset-2', 'scale-[1.02]');
+            }, 300);
+        }
+    }
+
+    // Testimonial Slider
+    let currentTestimonial = 0;
+    const testimonials = document.querySelectorAll('.testimonial-item');
+    const dots = document.querySelectorAll('#testimonial-dots button');
+    let testimonialInterval;
+
+    function showTestimonial(index) {
+        testimonials.forEach((el, idx) => {
+            if(idx === index) {
+                el.classList.remove('hidden');
+                el.classList.add('block');
+                setTimeout(() => el.style.opacity = '1', 50);
+            } else {
+                el.classList.remove('block');
+                el.classList.add('hidden');
+                el.style.opacity = '0';
+            }
+        });
+        dots.forEach((dot, idx) => {
+            if(idx === index) {
+                dot.className = "w-2 h-2 rounded-full bg-brand-500 transition-all duration-300";
+            } else {
+                dot.className = "w-2 h-2 rounded-full bg-slate-300 hover:bg-brand-400 transition-colors transition-all duration-300";
+            }
+        });
+        currentTestimonial = index;
+    }
+
+    function setTestimonial(index) {
+        showTestimonial(index);
+        resetAutoSlide();
+    }
+
+    function nextTestimonial() {
+        let index = (currentTestimonial + 1) % testimonials.length;
+        showTestimonial(index);
+    }
+
+    function prevTestimonial() {
+        let index = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+        showTestimonial(index);
+        resetAutoSlide();
+    }
+
+    function startAutoSlide() {
+        testimonialInterval = setInterval(nextTestimonial, 6000);
+    }
+
+    function resetAutoSlide() {
+        clearInterval(testimonialInterval);
+        startAutoSlide();
+    }
+
+    const testimonialBlock = document.getElementById('testimonials');
+    if (testimonialBlock) {
+        testimonialBlock.addEventListener('mouseenter', () => clearInterval(testimonialInterval));
+        testimonialBlock.addEventListener('mouseleave', startAutoSlide);
+    }
+
+    startAutoSlide();
+
+    // Accordion für Stellen-Details
+    function toggleJobDetails(id, btn) {
+        const details = document.getElementById(id);
+        const icon = btn.querySelector('.fa-chevron-down');
+        const textSpan = btn.querySelector('.btn-text');
+        
+        if (details.classList.contains('grid-rows-[0fr]')) {
+            details.classList.remove('grid-rows-[0fr]', 'opacity-0');
+            details.classList.add('grid-rows-[1fr]', 'opacity-100');
+            if (icon) icon.style.transform = 'rotate(180deg)';
+            if (textSpan) textSpan.innerText = 'Details ausblenden';
+        } else {
+            details.classList.remove('grid-rows-[1fr]', 'opacity-100');
+            details.classList.add('grid-rows-[0fr]', 'opacity-0');
+            if (icon) icon.style.transform = 'rotate(0deg)';
+            if (textSpan) textSpan.innerText = 'Details anzeigen';
+        }
+    }
+
+    // Bewerbungsprozess anstoßen & Formular-Wunsch-Beruf updaten
+    function applyToJob(positionName) {
+        const formPosition = document.getElementById('form-position');
+        const applySection = document.getElementById('bewerbung-sektion');
+        
+        if (!formPosition || !applySection) return;
+
+        let matched = false;
+        for (let i = 0; i < formPosition.options.length; i++) {
+            const optVal = formPosition.options[i].value;
+            if (optVal === positionName || optVal.includes(positionName) || positionName.includes(optVal)) {
+                formPosition.selectedIndex = i;
+                matched = true;
+                break;
+            }
+        }
+        
+        if (!matched) {
+            formPosition.value = "Initiativbewerbung / Schnupperpraktikum";
+        }
+        
+        updateFormHeader(formPosition.value);
+        applySection.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function updateFormHeader(position) {
+        const titleEl = document.getElementById('express-title-dynamic');
+        if (!titleEl) return;
+        
+        if (position && position !== "") {
+            titleEl.innerHTML = `Ausbildung als <br class="sm:hidden"><span class="text-emerald-400 font-extrabold">${position}</span>`;
+        } else {
+            titleEl.innerText = "Bewerben in nur 60 Sekunden!";
+        }
+    }
+
+    // FAQ Accordion
+    function toggleFaq(btn) {
+        const answer = btn.nextElementSibling;
+        const icon = btn.querySelector('.fa-chevron-down');
+        
+        if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
+            answer.style.maxHeight = '0px';
+            icon.style.transform = 'rotate(0deg)';
+        } else {
+            document.querySelectorAll('.faq-answer').forEach(el => {
+                el.style.maxHeight = '0px';
+                const parentBtn = el.previousElementSibling;
+                const parentIcon = parentBtn.querySelector('.fa-chevron-down');
+                if (parentIcon) parentIcon.style.transform = 'rotate(0deg)';
+            });
+
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+            icon.style.transform = 'rotate(180deg)';
+        }
+    }
+
+    function closeModal() {
+        document.getElementById('success-modal').classList.add('hidden');
+    }
+
+    function closeErrorModal() {
+        document.getElementById('error-modal').classList.add('hidden');
+    }
+
+    // Google Forms submission integration
+    async function handleFormSubmit(event) {
+        event.preventDefault();
+        
+        const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfF3jo754NjkOhPhRHpTli4VT_4ZQb4S2ODOJpT6V-v6IIYuA/formResponse";
+        const form = document.getElementById('express-form');
+        const submitButton = form.querySelector('button[type="submit"]');
+        const originalButtonHtml = submitButton.innerHTML;
+        
+        submitButton.disabled = true;
+        submitButton.innerHTML = `<i class="fa-solid fa-spinner animate-spin mr-2"></i> Wird gesendet...`;
+
+        const formData = new FormData(form);
+        const formParams = new URLSearchParams(formData);
+
+        try {
+            await fetch(googleFormUrl, {
+                method: "POST",
+                mode: "no-cors",
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: formParams.toString()
+            });
+
+            const modal = document.getElementById('success-modal');
+            modal.classList.remove('hidden');
+            form.reset();
+            updateFormHeader("");
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        } catch (error) {
+            console.error("Fehler beim Formularversand:", error);
+            
+            const errorModal = document.getElementById('error-modal');
+            const errorText = document.getElementById('error-modal-text');
+
+            errorModal.classList.remove('hidden');
+            errorText.innerHTML = `Es gab ein Problem beim Absenden deiner Expressbewerbung. Bitte überprüfe deine Internetverbindung oder sende uns eine E-Mail an <a href="mailto:karriere@hergarten-gruppe.de" class="text-brand-500 font-bold underline">karriere@hergarten-gruppe.de</a>.`;
+        } finally {
+            submitButton.disabled = false;
+            submitButton.innerHTML = originalButtonHtml;
+        }
+    }
+</script>
+</body>
+</html>
